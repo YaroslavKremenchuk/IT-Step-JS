@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="search-field">
+            <h1>MY WEATHER</h1>
+            <div class="gps">
+                <form autocomplete="on" action="/action_page.php">
+                    <div class="autocomplete">
+                        <input id="searchField" type="text" placeholder="Enter your City">
+                        <button id="send-req" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="tog-menu">
+            <ul>
+                <li><div id="today-selector" class="link-style">Today</div></li>
+                <li><div id="forecast-selector" class="link-style">5-day forecast</div></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div id="todayList" class="today-weather">
+                <div class="current-weather">
+                    <div class="current-head" id="current-date">
+                        <h3>CURRENT WEATHER</h3>
+                        <h3></h3>
+                    </div>
+                    <div class="current-body" id="curWeather"></div>
+                </div>
+                <div class="hourly">
+                    <h3>HOURLY</h3>
+                    <div id="hourlyWeather"></div>
+                </div>
+                <div class="near-places">
+                    <h3>NEARBY PLACES</h3>
+                    <div id="nearbyPlaces"></div>
+                </div>
+            </div>
+            
+            <div id="forecastdayList" class="forecast">
+                <div id="forecastWeather"></div>
+                <div class="hourly">
+                    <h3>HOURLY</h3>
+                    <div id="forecastHourly"></div>
+                </div>
+            </div>
+
+            <div id="error404" class="error404-window">
+                <img src="image/404-error-page.png" alt="ERROR 404">
+                <p>Location not found. Check your search location or enter the nearest city.</p>
+            </div>
+
+            <div id="error-loc" class="error-loc-window">
+                <img src="image/geoloc2.png" alt="Geolocation error">
+                <p>Geolocation function is disabled or temporarily unavailable. Please enter your city in the search bar.</p>
+            </div>
+        </div>    
+    </main>    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/f83f298110.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
